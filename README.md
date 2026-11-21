@@ -1,16 +1,29 @@
-# React + Vite
+# Julian Jay De Guzman — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio of Julian Jay De Guzman, a 3rd-year BSIT student at Gordon College and aspiring web developer.
 
-Currently, two official plugins are available:
+**Live site:** _add your Vercel link here_
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech stack
+React 19, Vite, React Router, Tailwind CSS v4
 
-## React Compiler
+## Pages
+Home, About, Projects, Contact, and a 404 Not Found page.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Run locally
+```bash
+npm install
+npm run dev
+```
+Build for production with `npm run build`.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Structure
+```
+src/
+  components/  Header, Footer, Layout, ProjectCard, SkillBadge, ContactForm...
+  pages/       Home, About, Projects, Contact, NotFound
+  data/        profile.js, skills.js, projects.js
+  hooks/       usePageTitle
+  assets/      portrait and project screenshots
+```
+`vercel.json` rewrites every route to `index.html` so refreshing `/about` works on the live site.
